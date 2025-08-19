@@ -2,11 +2,14 @@
 import LeftPointer from "../Icons/LeftPointer";
 import Cancel from "../Icons/Cancel";
 import Modal from "../Modal";
+import Back from "../Back";
+import Prev from "../Next";
 
 const DaysAndDate = ({isOpen, setIsOpen}:{isOpen:boolean, setIsOpen:(o:boolean)=>void}) => {
     const handleOpen = () => {
       setIsOpen(false);
     };
+    const isSelected = true
   return (
     <Modal isOpen={isOpen} onClick={handleOpen}>
       <div className="flex flex-col bg-[#0D0D0D] w-[400px] h-auto overflow-y-scroll rounded-[5px]">
@@ -18,6 +21,11 @@ const DaysAndDate = ({isOpen, setIsOpen}:{isOpen:boolean, setIsOpen:(o:boolean)=
           <Cancel />
         </div>
         <section className="calender">
+          <div className="flex justify-between items-center w-[227px] mx-auto">
+            <Back/>
+            <h4 className="font-semibold text-[16px] text-white">November 23</h4>
+            <Prev/>
+          </div>
           <div className="days">
             <div className="day">Sun</div>
             <div className="day">Mon</div>
@@ -46,7 +54,7 @@ const DaysAndDate = ({isOpen, setIsOpen}:{isOpen:boolean, setIsOpen:(o:boolean)=
             <button>13</button>
             <button>14</button>
             <button>15</button>
-            <button>16</button>
+            <button><span className={`${isSelected && "bg-[#2525E6] py-[2px] px-4 rounded-[200px]"}`}>16</span></button>
             <button>17</button>
             <button>18</button>
             <button>19</button>
