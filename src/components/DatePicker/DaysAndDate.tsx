@@ -22,7 +22,7 @@ const DaysAndDate = ({isOpen, setIsOpen}:{isOpen:boolean, setIsOpen:(o:boolean)=
         </div>
         <section className="calender">
           <div className="flex justify-between items-center w-[227px] mx-auto">
-            <Back/>
+            <Back onClick={handleOpen}/>
             <h4 className="font-semibold text-[16px] text-white">November 23</h4>
             <Prev/>
           </div>

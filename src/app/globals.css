@@ -6,6 +6,7 @@
 }
 * {
   box-sizing: border-box;
+  font-family: 'Euclid Circular B', sans-serif;
 }
 
 @theme inline {
